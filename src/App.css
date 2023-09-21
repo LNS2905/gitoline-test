@@ -34,25 +34,28 @@ ul li a {
 }
 
 ul li :hover{
-  background-color: yellow;
+  background-color: rgb(0, 162, 255);
   
 }
 
 div.container {
   display: inline-block;
   flex-wrap: wrap;  
+  justify-content: space-between;
   gap : 10px;
   padding: 10px;
+  
 
 }
 
 div.container div.column{
   flex: 1;
-  max-width: calc(33.33% - 10px);
+  max-width: calc(31.9%);
   flex-wrap: wrap;
   float: left;
   text-align: center;
-  
+  background-color: beige;
+  margin: 10px;
 }
 
 div.container div.column p button{
@@ -64,7 +67,9 @@ div.container div.column p button{
 }
 
 div.container div.column div.card{
-  width: 95%;
+  width: 100%;
+  display: flex-box;
+  align-self: center;
   justify-content: space-between;
 }
 
