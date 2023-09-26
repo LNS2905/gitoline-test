@@ -140,3 +140,29 @@ footer {
   max-height: 30%;
   overflow: auto;
 }
+
+/* CSS OF FILMS */
+
+.films-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;  
+}
+
+.film-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: beige;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 10px;
+}

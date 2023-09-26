@@ -1,12 +1,13 @@
 import './App.css';
+import Films from './components/Films';
 import Footer from './components/Footer';
-import Main from './components/Main';
+
 import Navigation from './components/Navigation';
 function App() {
   return (
     <div className='App'>
       <Navigation/>
-      <Main/>
+      <Films/>
       <Footer/>
     </div>
   );
