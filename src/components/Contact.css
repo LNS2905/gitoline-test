@@ -1,4 +1,4 @@
-/* contact-form {
+contact-form {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
@@ -39,4 +39,15 @@
   body{
     background-color: #ffffff;
     background-size: cover;
-  } */
+  }
+
+  footer {
+    width: 100%;
+    position: absolute;
+    margin-bottom: 0%;
+    background-color: darkkhaki;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
