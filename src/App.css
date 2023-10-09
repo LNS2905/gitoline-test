@@ -1,11 +1,12 @@
-nav {
-  background-color: black;
+/* nav {
+  background-color: rgb(0, 0, 0);
   box-sizing: border-box;
   display: flex;
   justify-content:space-between ;
   align-items: center;
   
-}
+} */
+
 
 
 nav ul {
@@ -34,7 +35,7 @@ ul li a {
 }
 
 ul li :hover{
-  background-color: rgb(0, 162, 255);
+  background-color: rgb(213, 89, 89);
   
 }
 
@@ -58,11 +59,10 @@ div.container div.column{
   margin: 10px;
 }
 
-div.container div.column p button{
+button p {
   display: block;
   margin: 0 auto;
-  background-color: black;
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   width: 100%;
 }
 
@@ -82,7 +82,7 @@ div.container div.column div.card img{
 
 
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   background-color: darkkhaki;
@@ -90,7 +90,7 @@ footer {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  padding: 10px; /* Có thể điều chỉnh padding tùy ý */
+  padding: 2%; /* Có thể điều chỉnh padding tùy ý */
 }
 
 
@@ -140,7 +140,7 @@ footer {
   color: white; /* Màu chữ cho theme dark */
 }
 
-.popup .close {
+/* .popup .close {
   position: absolute;
   top: 20px;
   right: 30px;
@@ -154,7 +154,7 @@ footer {
 .popup .content {
   max-height: 30%;
   overflow: auto;
-}
+} */
 
 /* CSS OF FILMS */
 

@@ -6,11 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './components/ThemeContext';
 import { BrowserRouter } from 'react-router-dom';
 import M from 'materialize-css';
+// import { ThemeProvider } from '@mui/material/styles';
+
 import 'materialize-css/dist/css/materialize.min.css';
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
+  <ThemeProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>

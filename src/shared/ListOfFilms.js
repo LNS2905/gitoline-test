@@ -5,7 +5,7 @@ const FilmsData = [
       title: "Ant-Man",
       year: "2023",
       nation: "USA",
-      Video:'https://www.youtube.com/watch?v=1HpZevFifuo',
+      Video:'https://www.youtube.com/embed/ZlNFpri-Y40?si=VPTo0_G0a4s2J8bI',
       cost: 100000,
       info: 'Người Kiến là một phim siêu anh hùng Mỹ 2015 dựa trên các nhân vật cùng tên của Marvel Comics: Scott Lang và Hank Pym. Phim được sản xuất bởi Marvel Studios và do Walt Disney Studios Motion Pictures phát hành, là phần thứ 12 kết thúc Giai đoạn 2 trong loạt phim Vũ trụ Điện ảnh Marvel'
     },
@@ -17,7 +17,7 @@ const FilmsData = [
         year: "2023",
         nation: "USA",
         cost: 100000,
-        Video:'https://www.youtube.com/embed/5emJgNiFbAA?si=75MCzaMhtAndZPSq',
+        Video:'https://www.youtube.com/embed/TnGl01FkMMo?si=4VMX9SgjGU-cQ-HY',
         info: 'Carl Date là một bộ phim hoạt hình máy tính ngắn của Mỹ năm 2023 do Pixar Animation Studios sản xuất, Bob Peterson viết kịch bản và đạo diễn và Kim Collins sản xuất. Phim có sự tham gia lồng tiếng của Ed Asner và Peterson.'
       },
 

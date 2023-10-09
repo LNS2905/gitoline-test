@@ -21,7 +21,7 @@ export default function Films() {
         <p>Nation: {film.nation}</p>
         <button onClick={() => { setFilmData(film) }}>
           <Link to={`detail/${film.id}`}>
-            <p><button>Detail</button></p>
+            <p>Detail</p>
           </Link>
         </button>
       </div>
@@ -39,10 +39,12 @@ export default function Films() {
             allowfullscreen>
           </iframe>
         </p>
-        <h2 style={{ color: theme.color, fontFamily: 'Tahoma, Arial, sans-serif', marginTop: '0' }}> {Films.title} </h2>
-        <a className='close' href='#'>&times;</a>
-        <div className='content' style={{ color: theme.color }}>
-          <p style={{ textIndent: '1em' }}>{Films.info}</p>
+        <div style={{ width: '560px', color: theme.color }}>
+          <h2 style={{ fontFamily: 'Tahoma, Arial, sans-serif', marginTop: '0' }}> {Films.title} </h2>
+          <a className='close' href='#'>&times;</a>
+          <div className='content'>
+            <p style={{ textIndent: '1em' }}>{Films.info}</p>
+          </div>
         </div>
       </div>
     </div>
