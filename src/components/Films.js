@@ -10,7 +10,7 @@ export default function Films() {
   const { theme } = useContext(ThemeContext); // Access the theme from context
 
   return (
-    <div className="films-container">
+    <div className="films-container" style={{backgroundColor:theme.backgroundColor}}>
     {FilmsData.map((film) => (
       <div key={film.id} className="film-item">
         <img src={film.image} alt={film.title} />

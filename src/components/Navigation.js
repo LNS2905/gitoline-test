@@ -13,9 +13,9 @@ export default function Navigation() {
       <Navbar
         className='menu'
         alignLinks="right"
-        brand={<span className="brand-logo"><Link to='/' style={{color:theme.color}}><Icon style={{ fontSize: 36, color: theme.color }}>movie_creation</Icon>Sang Cinema</Link></span>}
+        brand={<span className="brand-logo" style={{backgroundColor:theme.backgroundColor}}><Link to='/' style={{color:theme.color}}><Icon style={{ fontSize: 36, color: theme.color }}>movie_creation</Icon>Sang Cinema</Link></span>}
         id="mobile-nav"
-        menuIcon={<Icon>menu</Icon>}
+        menuIcon={<Icon style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>menu</Icon>}
         style={{ backgroundColor: theme.backgroundColor, color: theme.color }}
         >
         <ul>
@@ -30,6 +30,9 @@ export default function Navigation() {
           </li>
           <li>
             <Link to='/contact'style={{ color: theme.color }}><Icon left>contacts</Icon>Contact</Link>
+          </li>
+          <li>
+            <Link to='/login'style={{ color: theme.color }}><Icon left>login</Icon>Login</Link>
           </li>
           <li>
           <div style={{ position: "relative" }}>

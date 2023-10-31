@@ -6,6 +6,13 @@ import Detail from './components/Detail';
 import Contact from './components/Contact';
 import News from './components/News';
 import About from './components/About';
+import Dashboard from './components/Dashboard';
+import LoginGoogle from './components/Login';
+import AddData from './components/AddData';
+import DeleteData from './components/DeleteData';
+import EditData from './components/EditData';
+
+
 import { useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -13,6 +20,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+
 
 
 function App() {
@@ -40,6 +48,11 @@ function App() {
           <Route path='/news' element={<News />} />
           <Route path='/detail/:id' element={<Detail />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/login' element={<LoginGoogle />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/adddata' element={<AddData />} />
+          <Route path='/deletedata' element={<DeleteData />} />
+          <Route path='/editdata/:id' element={<EditData />} />
         </Routes>
       </ThemeProvider>
       <Footer />

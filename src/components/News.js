@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { ThemeContext } from './ThemeContext';
 
 const useStyles = makeStyles({
   card: {
@@ -15,6 +16,7 @@ const useStyles = makeStyles({
 
 const News = () => {
   const classes = useStyles();
+  const { theme } = useContext(ThemeContext);
   const newsItems = [
     {
       title: "MCU Phase 4 Director Reignites MCU Vs. DCEU Debates",
@@ -38,8 +40,8 @@ const News = () => {
   ];
 
 return (
-  <div className="news-section">
-    <Typography variant="h5" style={{ color: '#3f51b5', fontWeight: 'bold', margin: '20px', fontSize: '2em' }}>News</Typography>
+  <div className="news-section" style={{backgroundColor: theme.backgroundColor}}>
+    <Typography variant="h5" style={{ backgroundColor: theme.backgroundColor,color: '#3f51b5', fontWeight: 'bold', marginLeft: '20px', fontSize: '2em' }}>News</Typography>
     <Grid container spacing={3}>
       {newsItems.map((item, index) => (
         <Grid item xs={12} sm={6} key={index}>

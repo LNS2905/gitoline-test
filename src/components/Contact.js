@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import TextField from "@mui/material/TextField";
 import { styled } from "@mui/material/styles";
 import {Button, Select, Textarea, Row, Col } from "react-materialize";
 import Icon from "@mui/material/Icon";
 import Container from "@mui/material/Container";
+import { ThemeContext } from './ThemeContext'; // Import the ThemeContext
 
 // Tạo các lớp CSS tùy chỉnh bằng styled-components
 const StyledTextField = styled(TextField)({
@@ -52,72 +53,77 @@ const StyledContainer = styled(Container)({
 });
 
 export default function Contact() {
+  const { theme } = useContext(ThemeContext); // Access the theme from context
   const handleSubmit = (e) => {
     e.preventDefault();
     // Xử lý việc gửi form ở đây nếu cần
   };
 
   return (
-    <StyledContainer>
-      <Row>
-        <Col>
-          <h3>Contact us</h3>
-          <form onSubmit={handleSubmit}>
-            <StyledTextField
-              l={12}
-              m={12}
-              s={12}
-              id="Text Input-38"
-              label="Your Name"
-            /><br></br>
-            <StyledTextField
-              l={12}
-              m={12}
-              s={12}
-              id="Text Input-39"
-              label="Your Phone"
-            /><br></br>
-            <StyledTextField
-              l={12}
-              m={12}
-              s={12}
-              email
-              id="Text Input-41"
-              label="Email"
-              validate
-            />
-            <StyledSelect
-              l={12}
-              m={12}
-              s={12}
-              id="Select-46"
-              multiple={false}
-              onChange={function noRefCheck() {}}
-              value=""
-            >
-              <option disabled value="">
-                Choose your favorite movie
-              </option>
-              <option value="1">Romantic</option>
-              <option value="2">Horror</option>
-              <option value="3">Action</option>
-              <option value="4">Science Fiction</option>
-            </StyledSelect>
-            <br></br>
-            <StyledTextarea
-              l={12}
-              s={12}
-              icon={<Icon>mode_edit</Icon>}
-              
-              label="Your content"
-            />
-            <br></br>
-            <StyledButton l={12} s={12} type="submit">
-              Submit
-            </StyledButton>
-          </form>
-        </Col>
-      </Row>
-    </StyledContainer>
-  );
+    <div style={{backgroundColor: theme.backgroundColor}}>
+    <StyledContainer style={{backgroundColor:"white"}}>
+        <Row>
+          <Col>
+            <h3>Contact us</h3>
+            <form onSubmit={handleSubmit}>
+              <StyledTextField
+                l={12}
+                m={12}
+                s={12}
+                id="Text Input-38"
+                label="Your Name"
+              /><br></br>
+              <StyledTextField
+                l={12}
+                m={12}
+                s={12}
+                id="Text Input-39"
+                label="Your Phone"
+              /><br></br>
+              <StyledTextField
+                l={12}
+                m={12}
+                s={12}
+                email
+                id="Text Input-41"
+                label="Email"
+                validate
+              />
+              <StyledSelect
+                l={12}
+                m={12}
+                s={12}
+                id="Select-46"
+                multiple={false}
+                onChange={function noRefCheck() {}}
+                value=""
+              >
+                <option disabled value="">
+                  Choose your favorite movie
+                </option>
+                <option value="1">Romantic</option>
+                <option value="2">Horror</option>
+                <option value="3">Action</option>
+                <option value="4">Science Fiction</option>
+              </StyledSelect>
+              <br></br>
+              <StyledTextarea
+                l={12}
+                s={12}
+                icon={<Icon>mode_edit</Icon>}
+                
+                label="Your content"
+              />
+              <br></br>
+              <StyledButton l={12} s={12} type="submit">
+                Submit
+              </StyledButton>
+            </form>
+          </Col>
+        </Row>
+        </StyledContainer>
+        </div>
+    
+  )
 }
+
