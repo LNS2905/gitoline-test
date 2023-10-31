@@ -40,7 +40,7 @@ function LoginGoogle() {
   return (
 
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', backgroundColor: '#f0f0f0' }}>
-    <h2 style={{ marginBottom: '20px' }}>Vui lòng đăng nhập để xem Trang chủ</h2>
+    <h2 style={{ marginBottom: '20px' }}>Vui lòng đăng nhập để xem dashboard</h2>
     
     {user && (
         <div id="buttonDiv" style={{ padding: '10px 20px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}></div> 

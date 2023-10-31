@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useHref } from "react-router-dom";
 import DeleteModal from "./DeleteData";
 import { Button, Table, TableHead, TableRow, TableCell, TableBody, IconButton, TablePagination } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -52,6 +52,13 @@ export default function StickyHeadTable() {
     setOpen(false);
   };
 
+  const handleLogout = () => {
+    // Xoá thông tin người dùng đã đăng nhập
+    localStorage.removeItem('Film');
+    // Chuyển hướng về trang đăng nhập
+    window.location.href = "/";
+  };
+
   return (
     <>
 
@@ -64,17 +71,27 @@ export default function StickyHeadTable() {
           color="primary"
         >
           {" "}
-          Add film
+          Thêm phim
         </Button>
       </Link>
+      
+      <Button
+        variant="contained"
+        color="secondary"
+        onClick={handleLogout}
+      >
+        {" "}
+        Đăng xuất
+      </Button>
+
       <Table>
         <TableHead>
           <TableRow>
             <TableCell align="left">Poster</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Price</TableCell>
-            <TableCell align="right">Year</TableCell>
-            <TableCell align="right">Action</TableCell>
+            <TableCell>Tên</TableCell>
+            <TableCell>Giá</TableCell>
+            <TableCell align="right">Năm</TableCell>
+            <TableCell align="right">Hành động</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -121,5 +138,3 @@ export default function StickyHeadTable() {
     </>
   );
 }
-
-

@@ -23,7 +23,7 @@ function EditModal() {
       try {
         axios.put(`https://6531ff574d4c2e3f333d78e7.mockapi.io/Films/${id}`, {
           name: values.name,
-          poster: values.img,
+          img: values.img,
           year: values.year,
           price: values.price,
         });
@@ -37,7 +37,7 @@ function EditModal() {
       name: Yup.string()
         .required("Required.")
         .min(3, "Must be 3 characters or more"),
-      poster: Yup.string().required("Required.").url("Please type URL"),
+      img: Yup.string().required("Required.").url("Please type URL"),
       year: Yup.number().required("Required."),
       price: Yup.number()
         .required("Required.")
